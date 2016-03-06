@@ -1,5 +1,7 @@
 # setup
 
+[![Build Status](https://travis-ci.org/remanc/setup.svg?branch=master)](https://travis-ci.org/remanc/setup)
+
 ## Create a new NPM project
 
 ```
