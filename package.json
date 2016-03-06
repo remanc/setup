@@ -4,7 +4,9 @@
   "description": "## Create a new NPM project",
   "main": "index.js",
   "scripts": {
-    "test": "mocha"
+    "test-unit": "istanbul cover --dir reports/coverage _mocha -- --reporter dot",
+    "test-coverage": "istanbul check-coverage --statement 100 --branch 100 --function 100 --lines 100",
+    "test": "npm run test-unit && npm run test-coverage"
   },
   "repository": {
     "type": "git",
@@ -14,11 +16,8 @@
   "license": "ISC",
   "devDependencies": {
     "chai": "^3.5.0",
-    "grunt": "^0.4.5",
-    "grunt-karma": "^0.12.1",
-    "karma": "^0.13.21",
-    "karma-mocha": "^0.2.2",
-    "karma-phantomjs-launcher": "^1.0.0",
+    "coveralls": "^2.11.8",
+    "istanbul": "^0.4.2",
     "mocha": "^2.4.5"
   }
 }
