@@ -3,3 +3,8 @@ node_js:
   - "stable"
 after_success:
   - 'cat ./reports/coverage/lcov.info | ./node_modules/.bin/coveralls'
+
+sudo: false
+cache:
+  directories:
+    - node_modules
